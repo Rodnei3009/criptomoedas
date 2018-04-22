@@ -40,7 +40,7 @@ var FoxbitPage = /** @class */ (function () {
     };
     FoxbitPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-foxbit',template:/*ion-inline-start:"C:\Users\r.brassoroto\Documents\GitHub\criptomoedas\src\pages\foxbit\foxbit.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list inset>\n    <ion-item *ngFor="let fox of foxers">\n      <h2>{{fox.symbol}}</h2>\n      <p>{{fox.price_usd}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\r.brassoroto\Documents\GitHub\criptomoedas\src\pages\foxbit\foxbit.html"*/,
+            selector: 'page-foxbit',template:/*ion-inline-start:"C:\Users\r.brassoroto\Documents\GitHub\criptomoedas\src\pages\foxbit\foxbit.html"*/'<ion-header>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Home</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <ion-list inset>\n    <ion-item *ngFor="let fox of foxers">\n      <h2>{{fox.name}}</h2>\n      <p>{{fox.email}}</p>\n    </ion-item>\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"C:\Users\r.brassoroto\Documents\GitHub\criptomoedas\src\pages\foxbit\foxbit.html"*/,
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__providers_foxbit_foxbit__["a" /* FoxbitProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_foxbit_foxbit__["a" /* FoxbitProvider */]) === "function" && _c || Object])
     ], FoxbitPage);
@@ -442,10 +442,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var FoxbitProvider = /** @class */ (function () {
+    //apiUrl = 'https://api.coinmarketcap.com/v1/ticker/bitcoin';
     function FoxbitProvider(http) {
         this.http = http;
-        //apiUrl = 'https://jsonplaceholder.typicode.com/users';
-        this.apiUrl = 'https://api.coinmarketcap.com/v1/ticker/bitcoin';
+        this.apiUrl = 'https://jsonplaceholder.typicode.com/users';
         console.log('Hello FoxbitProvider Provider');
     }
     FoxbitProvider.prototype.getFox = function () {
