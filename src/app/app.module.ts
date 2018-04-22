@@ -1,21 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule, NavController } from 'ionic-angular';
 import { HttpClientModule } from '@angular/common/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { FoxbitPage } from '../pages/foxbit/foxbit';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { BinanceServiceProvider } from '../providers/binance-service/binance-service';
+import { FoxbitProvider } from '../providers/foxbit/foxbit';
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    FoxbitPage
   ],
   imports: [
     BrowserModule,
@@ -26,13 +29,15 @@ import { BinanceServiceProvider } from '../providers/binance-service/binance-ser
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    FoxbitPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    BinanceServiceProvider
+    BinanceServiceProvider,
+    FoxbitProvider
   ]
 })
 export class AppModule {}
